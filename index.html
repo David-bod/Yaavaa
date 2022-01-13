@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="David Bodineau" />
+    <meta name="theme-color" content="#000">
+    <meta name="robots" content="follow">
+    <meta name="description" content="Yava est un générateur de mot de passe aléatoire. Vous pouvez choisir le format (chiffres, lettres minuscules, lettres majuscules et caractères spéciaux). Nous sauvegardons AUCUN mot de passe.">
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" type="image/ico" sizes="64x64" href="/icon/favicon.ico">
+    <title>Générateur de mots de passe - Générer un mot de passe fort - Générer un mot de passe sécurisé - Génération de mots de passe</title>
+</head>
+<body>
+    <!-- Generate key -->
+    <div id="key-bloc" style="display: flex; flex-direction: column;">
+        <h3 onclick="copy()" id="random_key" style="text-align: center;"></h3>
+        <p style="color: rgb(22, 247, 255); margin-top: -28px;">Cliquez sur le mot de passe pour le copier</p>
+        <div style="max-width: 500px; text-align: center;">
+            <div style="color: white; text-align: center; margin-bottom: 20px;">
+                <input onclick="numberAllow()" type="checkbox" id="number" name="number" checked>
+                <label for="number">0-9</label>
+                <input onclick="miniAllow()" type="checkbox" id="mini_letter" name="mini_letter" checked>
+                <label for="mini_letter">Az</label>
+                <input onclick="maxAllow()" type="checkbox" id="max_letter" name="max_letter" checked>
+                <label for="max_letter">AZ</label>
+                <input onclick="specialAllow()" type="checkbox" id="special" name="special">
+                <label for="special">@!?</label>
+            </div>
+            <div>
+                <p id="allow"></p>
+            </div>
+            <input id="number_key" style="margin-bottom: 15px; width: 47px;" type="number" minlength="1" maxlength="5" min="1" value="35" placeholder="35">
+            <button onclick="createRandomNumber()">Générer un mot de passe</button>
+            <button onclick="clearNumber()" style="margin-left: 5px;">Effacer</button>
+        </div>
+        <p id="history" class="last_number"></p>
+        <button onclick="clearArray()" style="margin-top: 10px;">Effacer l'historique</button>
+    </div>
+    <div id="infos" style="color: white;">
+        <ul>
+            <li>Choisissez les caractères à intégrer à votre mot de passe avec les checkbox</li>
+            <li>Choisissez la longueur du mot de passe</li>
+            <li>Cliquez sur Générer un mot de passe</li>
+            <li>Vous avez accès à l'historique des mots de passe générés tant que la page n'a pas été rechargée ou que celle-ci n'ait pas été fermée</li>
+            <li style="border-top: 2px solid white; width: 30%; min-width: 280px; padding: 15px 0 5px 0; margin: auto; margin-top: 20px;">Informations importantes :</li>
+            <li style="color: rgba(255, 99, 71, .9); font-weight: bold;">Aucun mot de passe n'est sauvegardé dans une base de données</li>
+            <li style="color: rgb(255, 251, 41); font-weight: bold;">COOKIES : Nous utilisons des cookies (Google Analytics)</li>
+        </ul>
+    </div>
+    <article>
+        <h2>Comment choisir un bon mot de passe ?</h2>
+        <p>Un bon mot de passe doit contenir au moins 12 caractères et 4 types différents : des minuscules, des majuscules, des
+        chiffres et des caractères spéciaux.</p>
+        <p>Personne ne doit deviner votre mot de passe à partir du nom de votre chien ou de votre film préféré. Idem pour le code
+        de votre smartphone : préférez un nombre aléatoire à une année.</p>
+        <p>Pour éviter les piratages en cascade, chacun de vos comptes en ligne qui présente un caractère sensible (banque,
+        messagerie, réseau social, etc.) doit être verrouillé avec un mot de passe propre et unique.</p>
+    </article>
+    <footer>
+        <h1>Yaavaa - Générateur de mots de passe</h1>
+        <a href="https://davidbodineau.fr" rel="noreferrer" target="_">Créé par db - 2022</a>
+    </footer>
+
+</body>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VRSZRHLJK6"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-VRSZRHLJK6');
+</script>
+<script type="text/javascript" src="src/index.js"></script>
+</html>
