@@ -35,8 +35,10 @@
             <button onclick="createRandomNumber()">Générer un mot de passe</button>
             <button onclick="clearNumber()" style="margin-left: 5px;">Effacer</button>
         </div>
-        <p style="display: none;" id="history" class="last_number"></p>
-        <button onclick="clearArray()" style="margin-top: 10px;">Effacer l'historique</button>
+        <div id="history-bloc">
+            <p style="display: none;" id="history" class="last_number"></p>
+            <button onclick="clearArray()" style="margin-top: 10px;">Effacer l'historique</button>            
+        </div>
     </div>
     <div id="infos" style="color: white;">
         <ul>

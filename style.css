@@ -107,6 +107,13 @@ button:hover {
   box-shadow: 0 0 20px 1px rgb(107, 107, 107);
 }
 
+#history-bloc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px 0 10px;
+}
+
 /* Allow */
 #allow {
   color: green;

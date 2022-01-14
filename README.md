@@ -2,7 +2,7 @@
 
 ---
 
-## Version 1.0.0
+## Version 1.0.x
 
 - Générateur de mots de passe (Chiffres, lettres minuscules/majuscules et caractères spéciaux)
 - Possibilité de choisir la longueur du mot de passe
