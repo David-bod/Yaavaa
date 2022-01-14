@@ -7,8 +7,6 @@ const special = "&()-_)=#/*+$%!?;.,:";
 allow_key = document.getElementById('allow');
 display_key = document.getElementById('random_key');
 display_key.textContent = "Cliquez sur Générer un mot de passe";
-history_style = document.getElementById('history');
-history_style.style.display = 'none';
 //-------------------------------
 
 numberAllow(); miniAllow(); maxAllow();
@@ -115,7 +113,6 @@ function createRandomNumber() {
 function clearNumber() {
     number = document.getElementById('number_key');
     number.value = 0;
-    display_key = document.getElementById('random_key');
     display_key.textContent = "Choisissez un nombre > 0"
     createRandomNumber();
 }
@@ -135,11 +132,9 @@ function copy() {
 
     navigator.clipboard.writeText(content)
         .then(() => {
-            console.log('Copié !');
+            alert("Mot de passe copié !");
     })
         .catch(() => {
-        console.log('Erreur :/');
+            alert("Erreur :/");
     })
-
-    alert("Mot de passe copié !");
 }
